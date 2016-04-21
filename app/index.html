@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>EmberFfChat</title>
+    <title>Gabrielle's Chat</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
@@ -13,22 +13,22 @@
 
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/ember-chatapp.css">
-
-    {{content-for "head-footer"}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
   </head>
   <body>
-    {{content-for "body"}}
 
-    <script src="assets/vendor.js"></script>
-    <script src="assets/ember-chatapp.js"></script>
+       {{content-for "head-footer"}}
+
+         {{content-for "body"}}
+
+       <script src="assets/vendor.js"></script>
+       <script src="assets/ember-chatapp.js"></script>
+
+      {{content-for "body-footer"}}
+    <!-- <script>
 
 
-    <script>
-      var socket = io.connect('http://ff-chat-app.herokuapp.com/');
-      socket.on('chat', function(data){
-         $('.messages').append($('<li>').text(data.message));
-      })
-    </script>
-    {{content-for "body-footer"}}
+
+    </script> -->
   </body>
 </html>

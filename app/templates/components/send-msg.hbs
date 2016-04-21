@@ -1,7 +1,14 @@
 {{yield}}
 
-<h2>Post a message</h2>
-<form action="">
-      <input id="m" autocomplete="off"/>
-      <button {{action "sendMsg"}}>Send</button>
-</form>
+<div>
+   <form id="joinForm" action="">
+         <h5>Join the chat</h5>
+         <input id="n" autocomplete="off" placeholder="Your Name"/>
+         <button class="waves-effect waves-light btn" {{action "joinChat"}}>Join</button>
+   </form>
+   <form id="msgForm" action="" style="display: none">
+         <h5>Post a message</h5>
+         <input id="m" autocomplete="off"/>
+         <button class="waves-effect waves-light btn" {{action "sendMsg"}}>Send</button>
+   </form>
+</div>
