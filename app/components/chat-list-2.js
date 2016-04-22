@@ -13,14 +13,14 @@ export default Ember.Component.extend({
       $('.progress').show()
     })
     socket.on('chat', function (data) {
-      $('.messages').prepend($('<li>').text(data.user.name + ': ' + data.message).addClass('li receivedMsg'))
+      $('.messages').append($('<li>').text(data.user.name + ': ' + data.message).addClass('li receivedMsg'))
     })
     socket.on('joined', function (user) {
-      $('.messages').prepend($('<li class="joinMsg">').text(user.name + ' joined the chat.'))
+      $('.messages').append($('<li class="joinMsg">').text(user.name + ' joined the chat.'))
     })
     socket.on('left', function (user) {
       console.log(user.name + ' left the chat.')
-      $('.messages').prepend($('<li class="joinMsg">').text(user.name + ' left the chat.'))
+      $('.messages').append($('<li class="joinMsg">').text(user.name + ' left the chat.'))
     })
     socket.on('online', function (connections) {
       var names = ''

@@ -1,5 +1,5 @@
 import Ember from 'ember'
-var check = 0
+
 export default Ember.Component.extend({
   actions: {
     joinChat() {
